@@ -1,7 +1,13 @@
-#ifndef __CONSTANTS_INC__
+#ifndef   __CONSTANTS_INC__
 #define __CONSTANTS_INC__
 
+/* 
+ *  This file containts all the packet types, commands
+ *  and status constants
+ *  
+ */
 
+// Packet types
 typedef enum
 {
   PACKET_TYPE_COMMAND = 0,
@@ -19,7 +25,11 @@ typedef enum
   RESP_BAD_PACKET = 2,
   RESP_BAD_CHECKSUM = 3,
   RESP_BAD_COMMAND = 4,
-  RESP_BAD_RESPONSE = 5 
+  RESP_BAD_RESPONSE = 5,
+  RESP_COLOUR = 6, 
+  RESP_ULTRASONIC = 7, //ultrasonic_dist
+  RESP_IR = 8, //ir_dist
+  RESP_WHEEL = 9 //wheel_dist
 } TResponseType;
 
 
@@ -34,6 +44,9 @@ typedef enum
   COMMAND_TURN_RIGHT = 3,
   COMMAND_STOP = 4,
   COMMAND_GET_STATS = 5,
-  COMMAND_CLEAR_STATS = 6
+  COMMAND_CLEAR_STATS = 6,
+  COMMAND_COLOUR = 7,
+  COMMAND_REV_LEFT = 8,
+  COMMAND_REV_RIGHT = 9
 } TCommandType;
 #endif
